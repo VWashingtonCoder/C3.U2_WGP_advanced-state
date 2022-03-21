@@ -39,7 +39,7 @@ const inputChange = ({ name, value }) => {
   return { type: INPUT_CHANGE, payload: { name, value } }
 }
 const addNewTodo = (todoName) => {
-  return { type: ADD_NEW_TODO, payload: }
+  return { type: ADD_NEW_TODO, payload: { name: todoName, id: } }
 }
 
 // 3- REDUCER is a function that takes current state and an action object
@@ -70,8 +70,8 @@ export default function App() {
     // dispatch({ type: 'INPUT_CHANGE', payload: { name, value }})
   }
   const onSubmit = evt => {
-    evt.preventDefault()state.form.name
-    dispatch(addNewTodo())
+    evt.preventDefault()
+    dispatch(addNewTodo(state.form.name))
   }
   const toggleShouldShow = () => {
     dispatch(toggleDisplayCompleteds())
