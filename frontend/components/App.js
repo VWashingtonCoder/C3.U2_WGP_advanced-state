@@ -33,7 +33,7 @@ const toggleDisplayCompleteds = () => {
   return { type: TOGGLE_DISPLAY_COMPLETEDS }
 }
 const inputChange = () => {
-  return {  }
+  return { type: INPUT_CHANGE }
 }
 
 export default function App() {
