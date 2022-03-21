@@ -70,7 +70,7 @@ export default function App() {
     evt.preventDefault()
   }
   const toggleShouldShow = () => {
-` `
+    dispatch(toggleDisplayCompleteds())
   }
   const toggleStatus = id => () => {
 
