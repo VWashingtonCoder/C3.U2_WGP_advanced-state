@@ -21,7 +21,7 @@ const initialState = {
   displayCompleteds: true,
 }
 
-// a type of action that might change application state
+// 1- ACTION TYPES a type of action that might change application state
 const INPUT_CHANGE = 'INPUT_CHANGE'
 const ADD_NEW_TODO = 'ADD_NEW_TODO'
 const TOGGLE_COMPLETED = 'TOGGLE_COMPLETED'
