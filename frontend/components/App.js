@@ -47,7 +47,7 @@ const addNewTodo = todoName => {
 
 // 3- REDUCER is a function that takes current state and an action object
 // and returns the next state of the app
-const reducer = (state, action) => { // the action will look like { type: 'INPUT_CHANGE', payload: { name: 'name' value: 'foo' } }
+const reducer = (state, action) => {
   switch (action.type) {
     case ADD_NEW_TODO:
       return {
@@ -58,6 +58,8 @@ const reducer = (state, action) => { // the action will look like { type: 'INPUT
     case TOGGLE_DISPLAY_COMPLETEDS:
       return { ...state, displayCompleteds: !state.displayCompleteds }
     case INPUT_CHANGE: {
+      // in this case the action will look like:
+      // { type: 'INPUT_CHANGE', payload: { name: 'name' value: 'foo' } }
       const { form } = state
       const { name, value } = action.payload
       return { ...state, form: { ...form, [name]: value } }
