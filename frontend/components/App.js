@@ -56,7 +56,9 @@ const reducer = (state, action) => {
       return {
         ...state,
         todos: state.todos.map(todo => {
-          if (action.payload === )
+          if (action.payload === todo.id) {
+            return { ...todo,  }
+          }
         })
       }
     }
