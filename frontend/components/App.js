@@ -53,7 +53,12 @@ const toggleCompleted = id => {
 const reducer = (state, action) => {
   switch (action.type) {
     case TOGGLE_COMPLETED: {
-      return {}
+      return {
+        ...state,
+        todos: state.todos.map(todo => {
+          if (action.payload === )
+        })
+      }
     }
     case ADD_NEW_TODO:
       return {
