@@ -24,7 +24,7 @@ const initialState = {
 // a type of action that might change application state
 const INPUT_CHANGE = 'INPUT_CHANGE'
 const ADD_NEW_TODO = 'ADD_NEW_TODO'
-const 
+const TOGGLE_COMPLETED
 
 export default function App() {
   const [state, setState] = useState(initialState)
