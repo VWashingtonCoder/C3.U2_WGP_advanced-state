@@ -41,7 +41,7 @@ const inputChange = ({ name, value }) => {
 // and returns the next state of the app
 const reducer = (state, action) => {
   switch (action.type) {
-    
+    case TO
   }
 }
 
