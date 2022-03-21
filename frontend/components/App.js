@@ -50,7 +50,7 @@ const addNewTodo = todoName => {
 const reducer = (state, action) => { // the action will look like { type: 'INPUT_CHANGE', payload: { name: 'name' value: 'foo' } }
   switch (action.type) {
     case ADD_NEW_TODO: {
-      return { ...state, todos:  }
+      return { ...state, todos: {  } }
     }
     case TOGGLE_DISPLAY_COMPLETEDS: {
       return { ...state, displayCompleteds: !state.displayCompleteds }
