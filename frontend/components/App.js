@@ -49,7 +49,7 @@ const reducer = (state, action) => { // the action will look like { type: 'INPUT
     case INPUT_CHANGE: {
       const { form } = state
       const { name, value } = action.payload
-      return { ...state, form: { ...form, [action.payload.name]: action.payload.value } }
+      return { ...state, form: { ...form, [name]: value } }
     }
     default:
       return state
