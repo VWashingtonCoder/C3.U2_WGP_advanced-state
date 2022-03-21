@@ -21,13 +21,14 @@ const initialState = {
   displayCompleteds: true,
 }
 
-// 1- ACTION TYPES a type of action that might change application state
+// 1- ACTION TYPE is a type of action that might change application state
 const INPUT_CHANGE = 'INPUT_CHANGE'
 const ADD_NEW_TODO = 'ADD_NEW_TODO'
 const TOGGLE_COMPLETED = 'TOGGLE_COMPLETED'
 const TOGGLE_DISPLAY_COMPLETEDS = 'TOGGLE_DISPLAY_COMPLETEDS'
 
-// 2- ACTION CREATORS 
+// 2- ACTION CREATORS are functions that return action objects
+// ACTION OBJECT is an object that has a type prop and 
 
 export default function App() {
   const [state, setState] = useState(initialState)
