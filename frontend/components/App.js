@@ -25,7 +25,7 @@ const initialState = {
 const INPUT_CHANGE = 'INPUT_CHANGE'
 const ADD_NEW_TODO = 'ADD_NEW_TODO'
 const TOGGLE_COMPLETED = 'TOGGLE_COMPLETED'
-const 
+const TOGGLE_DISPLAY_COMPLETEDS = 'TOGGLE_DISPLAY_COMPLETEDS'
 
 export default function App() {
   const [state, setState] = useState(initialState)
