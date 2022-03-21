@@ -32,6 +32,9 @@ const TOGGLE_DISPLAY_COMPLETEDS = 'TOGGLE_DISPLAY_COMPLETEDS'
 const toggleDisplayCompleteds = () => {
   return { type: TOGGLE_DISPLAY_COMPLETEDS }
 }
+const inputChange = () => {
+  return {  }
+}
 
 export default function App() {
   const [state, setState] = useState(initialState)
