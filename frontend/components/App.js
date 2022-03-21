@@ -31,20 +31,10 @@ export default function App() {
     evt.preventDefault()
   }
   const toggleShouldShow = () => {
-    setState({
-      ...state,
-      displayCompleteds: !state.displayCompleteds
-    })
+
   }
   const toggleStatus = id => () => {
-    setState({
-      ...state,
-      todos: state.todos.map(td => {
-        return td.id == id
-          ? { ...td, completed: !td.completed }
-          : td
-      })
-    })
+
   }
   return (
     <div>
