@@ -29,7 +29,9 @@ const TOGGLE_DISPLAY_COMPLETEDS = 'TOGGLE_DISPLAY_COMPLETEDS'
 
 // 2- ACTION CREATORS are functions that return action objects
 // ACTION OBJECT is an object that has a type prop and (opt) a payload prop
-const toggleDisplayCompleteds
+const toggleDisplayCompleteds = () => {
+  return { type:  }
+}
 
 export default function App() {
   const [state, setState] = useState(initialState)
