@@ -45,13 +45,16 @@ const addNewTodo = todoName => {
   }
 }
 const toggleCompleted = id => {
-  return { type: TOGGLE_COMPLETED }
+  return { type: TOGGLE_COMPLETED, payload: id }
 }
 
 // 3- REDUCER is a function that takes current state and an action object
 // and returns the next state of the app
 const reducer = (state, action) => {
   switch (action.type) {
+    case TOGGLE_COMPLETED: {
+      return {}
+    }
     case ADD_NEW_TODO:
       return {
         ...state,
