@@ -40,7 +40,9 @@ const inputChange = ({ name, value }) => {
 // 3- REDUCER is a function that takes current state and an action object
 // and returns the next state of the app
 const reducer = (state, action) => {
-  // big if statement
+  switch (action.type) {
+    
+  }
 }
 
 export default function App() {
