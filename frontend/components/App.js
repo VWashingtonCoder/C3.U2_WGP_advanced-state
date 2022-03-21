@@ -52,7 +52,9 @@ const reducer = (state, action) => { // the action will look like { type: 'INPUT
     case ADD_NEW_TODO: {
       return {
         ...state,
-        todos: [...state.todos, action.payload] }
+        todos: [...state.todos, action.payload],
+        
+      }
     }
     case TOGGLE_DISPLAY_COMPLETEDS: {
       return { ...state, displayCompleteds: !state.displayCompleteds }
