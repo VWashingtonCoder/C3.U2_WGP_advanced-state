@@ -64,8 +64,8 @@ export default function App() {
   const onChange = evt => {
     const { name, value } = evt.target
     debugger
-    // dispatch(inputChange({ name, value }))
     dispatch({ type: 'INPUT_CHANGE', payload: { name, value }})
+    // dispatch(inputChange({ name, value }))
   }
   const onSubmit = evt => {
     evt.preventDefault()
