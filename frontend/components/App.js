@@ -71,8 +71,7 @@ export default function App() {
   }
   const onSubmit = evt => {
     evt.preventDefault()
-    // ??????????
-    dispatch()
+    dispatch(addNewTodo())
   }
   const toggleShouldShow = () => {
     dispatch(toggleDisplayCompleteds())
