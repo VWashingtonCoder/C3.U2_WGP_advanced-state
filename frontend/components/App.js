@@ -46,8 +46,11 @@ const reducer = (state, action) => { // the action will look like { type: 'INPUT
     case TOGGLE_DISPLAY_COMPLETEDS: {
       return { ...state, displayCompleteds: !state.displayCompleteds }
     }
-    case INPUT_CHANGE:
-      return { ...state, form: { ...state.form, [action.payload.name]: action.payload.value } }
+    case INPUT_CHANGE: {
+      const { form } = state
+      const { name, value } = action.payload
+      return { ...state, form: { ...form, [action.payload.name]: action.payload.value } }
+    }
     default:
       return state
   }
