@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useReducer } from 'react'
 import Form from './Form'
 import TodoList from './TodoList'
 
@@ -57,7 +57,7 @@ const reducer = (state, action) => { // the action will look like { type: 'INPUT
 }
 
 export default function App() {
-  const [state, setState] = useState(initialState)
+  const [state, dispatch] = useState(initialState)
 
   const onChange = evt => {
     const { name, value } = evt.target
