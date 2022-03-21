@@ -57,7 +57,7 @@ const reducer = (state, action) => { // the action will look like { type: 'INPUT
 }
 
 export default function App() {
-  const [state, dispatch] = useState(initialState)
+  const [state, dispatch] = useReducer(reducer, initialState)
 
   const onChange = evt => {
     const { name, value } = evt.target
