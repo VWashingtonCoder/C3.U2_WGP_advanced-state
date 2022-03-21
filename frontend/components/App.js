@@ -45,6 +45,8 @@ const reducer = (state, action) => {
       return {}
     case INPUT_CHANGE:
       return {}
+    default:
+      return state
   }
 }
 
