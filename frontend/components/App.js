@@ -78,6 +78,7 @@ const reducer = (state, action) => {
       const { name, value } = action.payload
       return { ...state, form: { ...form, [name]: value } }
     }
+    // do not forget to add default
     default:
       return state
   }
