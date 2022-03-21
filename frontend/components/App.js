@@ -26,19 +26,9 @@ export default function App() {
 
   const onChange = evt => {
     const { name, value } = evt.target
-    setState({ ...state, form: { [name]: value } })
   }
   const onSubmit = evt => {
     evt.preventDefault()
-    setState({
-      ...state,
-      form: initialForm,
-      todos: state.todos.concat({
-        id: getId(),
-        name: state.form.name,
-        completed: false,
-      }),
-    })
   }
   const toggleShouldShow = () => {
     setState({
