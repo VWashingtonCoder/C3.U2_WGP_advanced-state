@@ -61,7 +61,7 @@ export default function App() {
 
   const onChange = evt => {
     const { name, value } = evt.target
-    inputChange({ name, value })
+    dispatch(inputChange({ name, value }))
   }
   const onSubmit = evt => {
     evt.preventDefault()
