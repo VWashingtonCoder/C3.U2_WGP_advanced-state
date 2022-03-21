@@ -36,6 +36,7 @@ const toggleDisplayCompleteds = () => {
   return { type: TOGGLE_DISPLAY_COMPLETEDS }
 }
 const inputChange = ({ name, value }) => {
+  debugger
   return { type: INPUT_CHANGE, payload: { name, value } }
 }
 
@@ -47,6 +48,7 @@ const reducer = (state, action) => { // the action will look like { type: 'INPUT
       return { ...state, displayCompleteds: !state.displayCompleteds }
     }
     case INPUT_CHANGE: {
+      debugger
       const { form } = state
       const { name, value } = action.payload
       return { ...state, form: { ...form, [name]: value } }
@@ -61,6 +63,7 @@ export default function App() {
 
   const onChange = evt => {
     const { name, value } = evt.target
+    debugger
     dispatch(inputChange({ name, value }))
   }
   const onSubmit = evt => {
