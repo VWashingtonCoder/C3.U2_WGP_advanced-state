@@ -53,7 +53,7 @@ const reducer = (state, action) => { // the action will look like { type: 'INPUT
       return {
         ...state,
         todos: [...state.todos, action.payload],
-        
+        form: initialForm,
       }
     }
     case TOGGLE_DISPLAY_COMPLETEDS: {
