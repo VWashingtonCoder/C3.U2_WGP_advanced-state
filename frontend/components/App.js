@@ -21,7 +21,9 @@ const initialState = {
   displayCompleteds: true,
 }
 
+// a type of action that might change application state
 const INPUT_CHANGE = 'INPUT_CHANGE'
+const 
 
 export default function App() {
   const [state, setState] = useState(initialState)
