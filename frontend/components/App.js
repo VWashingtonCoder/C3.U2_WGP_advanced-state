@@ -69,8 +69,8 @@ export default function App() {
   const onSubmit = evt => {
     evt.preventDefault()
   }
-  const toggleShouldShow = () => { // click handler
-
+  const toggleShouldShow = () => {
+` `
   }
   const toggleStatus = id => () => {
 
