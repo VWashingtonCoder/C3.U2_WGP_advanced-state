@@ -21,6 +21,8 @@ const initialState = {
   displayCompleteds: true,
 }
 
+const INPUT_CHANGE = 'INPUT_CHANGE'
+
 export default function App() {
   const [state, setState] = useState(initialState)
 
