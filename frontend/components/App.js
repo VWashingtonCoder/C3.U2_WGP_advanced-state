@@ -38,9 +38,11 @@ const toggleDisplayCompleteds = () => {
 const inputChange = ({ name, value }) => {
   return { type: INPUT_CHANGE, payload: { name, value } }
 }
-const addNewTodo = (todoName) => {
+const addNewTodo = todoName => {
   return {
-    type: ADD_NEW_TODO, payload: { name: todoName, id: getId(), completed: false } }
+    type: ADD_NEW_TODO,
+    payload: { name: todoName, id: getId(), completed: false },
+  }
 }
 
 // 3- REDUCER is a function that takes current state and an action object
