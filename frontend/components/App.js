@@ -61,8 +61,10 @@ export default function App() {
 
   const onChange = evt => {
     const { name, value } = evt.target
-    // dispatch({ type: 'INPUT_CHANGE', payload: { name, value }})
     dispatch(inputChange({ name, value }))
+    // the above is equivalent to the following,
+    // but less verbose, and action creators are reusable
+    // dispatch({ type: 'INPUT_CHANGE', payload: { name, value }})
   }
   const onSubmit = evt => {
     evt.preventDefault()
