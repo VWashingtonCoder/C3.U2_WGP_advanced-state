@@ -13,6 +13,7 @@ const initialTodos = [
 
 const initialForm = {
   name: '',
+  more: '',
 }
 
 const initialState = {
@@ -45,7 +46,7 @@ const reducer = (state, action) => { // the action will look like { type: 'INPUT
       return { ...state, displayCompleteds: !state.displayCompleteds }
     }
     case INPUT_CHANGE:
-      return { ...state,  }
+      return { ...state, form:  }
     default:
       return state
   }
