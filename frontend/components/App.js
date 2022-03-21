@@ -46,7 +46,7 @@ const reducer = (state, action) => { // the action will look like { type: 'INPUT
       return { ...state, displayCompleteds: !state.displayCompleteds }
     }
     case INPUT_CHANGE:
-      return { ...state, form:  }
+      return { ...state, form: { ...state.form,  } }
     default:
       return state
   }
