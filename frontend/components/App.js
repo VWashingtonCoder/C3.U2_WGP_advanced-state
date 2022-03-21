@@ -41,7 +41,10 @@ const inputChange = ({ name, value }) => {
 // and returns the next state of the app
 const reducer = (state, action) => {
   switch (action.type) {
-    case TO
+    case TOGGLE_DISPLAY_COMPLETEDS:
+      return stuff
+    case INPUT_CHANGE:
+      return some other stuff
   }
 }
 
