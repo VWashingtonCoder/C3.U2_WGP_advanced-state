@@ -45,7 +45,7 @@ const reducer = (state, action) => {
       return { ...state, displayCompleteds: !state.displayCompleteds }
     }
     case INPUT_CHANGE:
-      return {}
+      return {  }
     default:
       return state
   }
@@ -61,7 +61,7 @@ export default function App() {
     evt.preventDefault()
   }
   const toggleShouldShow = () => { // click handler
-    
+
   }
   const toggleStatus = id => () => {
 
