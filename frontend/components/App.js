@@ -49,16 +49,14 @@ const addNewTodo = todoName => {
 // and returns the next state of the app
 const reducer = (state, action) => { // the action will look like { type: 'INPUT_CHANGE', payload: { name: 'name' value: 'foo' } }
   switch (action.type) {
-    case ADD_NEW_TODO: {
+    case ADD_NEW_TODO:
       return {
         ...state,
         todos: [...state.todos, action.payload],
         form: initialForm,
       }
-    }
-    case TOGGLE_DISPLAY_COMPLETEDS: {
+    case TOGGLE_DISPLAY_COMPLETEDS:
       return { ...state, displayCompleteds: !state.displayCompleteds }
-    }
     case INPUT_CHANGE: {
       const { form } = state
       const { name, value } = action.payload
