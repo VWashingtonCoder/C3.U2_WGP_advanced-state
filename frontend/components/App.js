@@ -32,8 +32,8 @@ const TOGGLE_DISPLAY_COMPLETEDS = 'TOGGLE_DISPLAY_COMPLETEDS'
 const toggleDisplayCompleteds = () => {
   return { type: TOGGLE_DISPLAY_COMPLETEDS }
 }
-const inputChange = ({ name, input }) => {
-  return { type: INPUT_CHANGE, payload: { name: ?, value: ? } }
+const inputChange = ({ name, value }) => {
+  return { type: INPUT_CHANGE, payload: { name, value } }
 }
 
 export default function App() {
