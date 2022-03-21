@@ -68,12 +68,14 @@ export default function App() {
   }
   const onSubmit = evt => {
     evt.preventDefault()
+    // ??????????
+    dispatch()
   }
   const toggleShouldShow = () => {
     dispatch(toggleDisplayCompleteds())
   }
   const toggleStatus = id => () => {
-
+    // ??????????
   }
   return (
     <div>
