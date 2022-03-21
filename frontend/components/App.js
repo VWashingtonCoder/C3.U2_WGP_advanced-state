@@ -38,6 +38,7 @@ const toggleDisplayCompleteds = () => {
 const inputChange = ({ name, value }) => {
   return { type: INPUT_CHANGE, payload: { name, value } }
 }
+const addNewTodo = ()
 
 // 3- REDUCER is a function that takes current state and an action object
 // and returns the next state of the app
