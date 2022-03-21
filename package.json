@@ -9,7 +9,7 @@
     "frontend": "webpack serve --open",
     "backend": "node index.js",
     "start": "npm run backend",
-    "ketchup": "git fetch && git reset --"
+    "ketchup": "git fetch && git reset --hard origin/lecture"
   },
   "devDependencies": {
     "@babel/core": "7.17.8",
