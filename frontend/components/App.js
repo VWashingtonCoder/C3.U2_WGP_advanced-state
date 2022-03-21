@@ -39,13 +39,13 @@ const inputChange = ({ name, value }) => {
 
 // 3- REDUCER is a function that takes current state and an action object
 // and returns the next state of the app
-const reducer = (state, action) => { // the action will look like { type: 'INPUT_CHANGE', payload: { 'name', 'foo' } }
+const reducer = (state, action) => { // the action will look like { type: 'INPUT_CHANGE', payload: { 'name''foo' } }
   switch (action.type) {
     case TOGGLE_DISPLAY_COMPLETEDS: {
       return { ...state, displayCompleteds: !state.displayCompleteds }
     }
     case INPUT_CHANGE:
-      return {  }
+      return { ...state,  }
     default:
       return state
   }
