@@ -42,7 +42,7 @@ const inputChange = ({ name, value }) => {
 const reducer = (state, action) => {
   switch (action.type) {
     case TOGGLE_DISPLAY_COMPLETEDS:
-      return {}
+      return { ...state, displayCompleteds: !state.displayCompleteds }
     case INPUT_CHANGE:
       return {}
     default:
