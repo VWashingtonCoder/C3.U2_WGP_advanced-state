@@ -1,76 +1,55 @@
-import React, { useState } from 'react'
+import React, { useReducer } from 'react'
 import Form from './Form'
 import TodoList from './TodoList'
+// Redux imports
+import { connect } from "react-redux"
+import * as actionCreators from "../state/action-creators"
 
-let id = 0
-const getId = () => ++id
-
-const initialTodos = [
-  { id: getId(), name: "Walk the dog", completed: false },
-  { id: getId(), name: "Learn React", completed: true },
-  { id: getId(), name: "Have fun", completed: false },
-]
-
-const initialForm = {
-  name: '',
-}
-
-const initialState = {
-  form: initialForm,
-  todos: initialTodos,
-  displayCompleteds: true,
-}
-
-export default function App() {
-  const [state, setState] = useState(initialState)
+function App(props) {
+  const { 
+    // states
+    todos, 
+    displayCompleteds, 
+    form,
+    //action creators
+    addNewTodo, 
+    toggleCompleted, 
+    toggleDisplayCompleteds, 
+    inputChange
+  } = props
 
   const onChange = evt => {
     const { name, value } = evt.target
-    setState({ ...state, form: { [name]: value } })
+    inputChange({  name, value })
   }
   const onSubmit = evt => {
     evt.preventDefault()
-    setState({
-      ...state,
-      form: initialForm,
-      todos: state.todos.concat({
-        id: getId(),
-        name: state.form.name,
-        completed: false,
-      }),
-    })
+    addNewTodo(form.name)
   }
   const toggleShouldShow = () => {
-    setState({
-      ...state,
-      displayCompleteds: !state.displayCompleteds
-    })
+    toggleDisplayCompleteds()
   }
   const toggleStatus = id => () => {
-    setState({
-      ...state,
-      todos: state.todos.map(td => {
-        return td.id == id
-          ? { ...td, completed: !td.completed }
-          : td
-      })
-    })
+    toggleCompleted(id)
   }
+  
   return (
     <div>
       <TodoList
-        todos={state.todos}
-        displayCompleteds={state.displayCompleteds}
+        todos={todos}
+        displayCompleteds={displayCompleteds}
         toggleStatus={toggleStatus}
       />
       <Form
         onSubmit={onSubmit}
         onChange={onChange}
         toggleShouldShow={toggleShouldShow}
-        displayCompleteds={state.displayCompleteds}
-        disabled={!state.form.name.length}
-        values={state.form}
+        displayCompleteds={displayCompleteds}
+        disabled={!form.name.length}
+        values={form}
       />
     </div>
   )
 }
+
+export default connect(state => state, actionCreators)(App)
