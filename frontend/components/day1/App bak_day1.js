@@ -1,6 +1,6 @@
 import React, { useReducer } from 'react'
-import Form from './Form'
-import TodoList from './TodoList'
+import Form from '../Form'
+import TodoList from '../TodoList'
 
 let id = 0
 const getId = () => ++id

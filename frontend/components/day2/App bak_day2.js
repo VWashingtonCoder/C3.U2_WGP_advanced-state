@@ -1,9 +1,9 @@
-import React, {useEffect} from 'react'
+import React from 'react'
 import Form from './Form'
 import TodoList from './TodoList'
 // REDUX IMPORTS
 import { connect } from 'react-redux'
-import * as actionCreators from './state/action-creators'
+import * as actionCreators from '../state/action-creators'
 
 function App(props) {
   const {
@@ -14,28 +14,23 @@ function App(props) {
     // action creators
     toggleDisplayCompleteds,
     inputChange,
-    // Async action creators
-    fetchAllTodos,
-    patchExistingTodo,
-    postNewTodo,
+    addNewTodo,
+    toggleCompleted,
     
   } = props
-  useEffect(() => {
-    fetchAllTodos()
-  })
   const onChange = evt => {
     const { name, value } = evt.target
     inputChange({ name, value })
   }
   const onSubmit = evt => {
     evt.preventDefault()
-    postNewTodo(form.name)
+    addNewTodo(form.name)
   }
   const toggleShouldShow = () => {
     toggleDisplayCompleteds()
   }
   const toggleStatus = id => () => {
-    patchExistingTodo(id)
+    toggleCompleted(id)
   }
   return (
     <div>
